@@ -1,0 +1,56 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <title>  </title>
+<meta charset='utf-8'>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href='css/style.css' rel='stylesheet' type="text/css">
+
+</head>
+<body>
+    <header class="header"> 
+        <nav>
+          <ul>
+            <li ><a href="index4.html">Главная</a></li>
+            <li  ><a href="index.html">Экскурcии</a></li>
+            <li  class="active"><a href="index2.html">Записаться</a></li>
+            <li ><a href="index5.html">Тест</a></li>
+            <li class="btn"><a href="index3.html">Наши контакты</a></li>
+        </ul>
+    </nav>
+</header>
+<body>
+    <h2 class = "course-title"> Заполни информацию </h3>
+        <form class = "form" action = 'https://www.google.ru/?hl=ru' method = "get" target = "_blank">
+         <p> Укажите Ваш пол:
+        <input type="Radio" name="gender" value="female"> Женский
+        <input type="Radio" name="gender" value="male" checked > Мужской
+        </p>
+        <p> Как вы нас нашли?:
+        <input type="Checkbox" name="experience"  value="" checked> VK
+        <input type="Checkbox"  name="experience"   value="" checked> Instagram
+        <input type="Checkbox" name="experience" value="" checked> Instagram 
+    </p>
+     <p> С кем Вы чаще всего ходите в туры?
+        <select name="who">
+            <OPTION value="friends"> с друзьями </OPTION>
+            <OPTION value="relatives"> с родственниками</OPTION>
+            <OPTION value = "unknown"> с незнакомыми людьми</OPTION>
+        </select>
+    </p>
+
+
+    <p> Дата рождения : <input type="date" name="user_date"  value='birth_data'></p>
+    <p> Пароль: <input type="password" name="password" size=9  value="123"></p>
+   
+
+
+    <p>
+        <input type="Reset"  name="Reset"  value="Обновить">
+        <input type="Submit" name="submit"  value="Отправить">
+    </p>
+
+      
+
+    </form>
+</body>

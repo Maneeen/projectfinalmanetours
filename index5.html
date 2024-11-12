@@ -1,0 +1,63 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <title>Туры</title>
+    <meta charset='utf-8'>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='css/style.css' rel='stylesheet' type="text/css">
+</head>
+<body>
+    <header class="header"> 
+        <nav>
+          <ul>
+            <li><a href="index4.html">Главная</a></li>
+            <li><a href="index.html">Экскурcии</a></li>
+            <li><a href="index2.html">Записаться</a></li>
+            <li class="active"><a href="index5.html">Тест</a></li>
+            <li class="btn"><a href="index3.html">Наши контакты</a></li>
+          </ul>
+        </nav>
+    </header>
+    <h1>Тест</h1>
+    <p id="task_content" method="get" target="_blank">Принадлежит ли целое C диапазону A-B</p>
+    <p>Значение A: <span id="a">15</span></p>
+    <p>Значение B: <span id="b">10</span></p>
+    <p>Значение C: <span id="c">12</span></p>
+    <button id="verify">Оценить</button>
+    <p>Результат: <span id="result" type="result" name="true"></span></p>
+
+    <form id="searchForm" action="https://www.google.ru/?hl=ru" method="get">
+        <input type="text" id="searchQuery" name="q" value="">
+        <input type="submit" name="submit" value="Отправить">
+    </form>
+
+    <script>
+        document.getElementById("verify").addEventListener("click", function() {
+            // Example logic to check if C is within range of A and B
+            const a = parseInt(document.getElementById("a").textContent);
+            const b = parseInt(document.getElementById("b").textContent);
+            const c = parseInt(document.getElementById("c").textContent);
+            let resultText;
+
+            if (c >= Math.min(a, b) && c <= Math.max(a, b)) {
+                resultText = "В диапазоне";
+            } else {
+                resultText = "Вне диапазона";
+            }
+            document.getElementById("result").textContent = resultText;
+
+            // Set the search query dynamically
+            document.getElementById("searchQuery").value = resultText;
+        });
+
+        // Optional: Automatically submit the form after setting the value
+        document.getElementById("searchForm").addEventListener("submit", function(event) {
+            if (document.getElementById("searchQuery").value === "") {
+                event.preventDefault();
+                alert("Пожалуйста, сначала нажмите 'Оценить' для получения результата.");
+            }
+        });
+    </script>
+</body>
+</html>
+
